@@ -1,4 +1,4 @@
-import java.util.Random;
+/*import java.util.Random;
 
 
 public class Main {
@@ -10,6 +10,6 @@ public class Main {
         int r2 = random.nextInt(3500);
         CargoCar kamaz = new CargoCar(r2);
         kamaz.setMax(10000);
-
     }
 }
+*/
