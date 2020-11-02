@@ -1,10 +1,14 @@
 import java.util.Random;
 public class CargoCar extends Car {
     int weight;
+    String name;
     Random random = new Random();
     public CargoCar() {
         max = 10000;
         weight = random.nextInt(10000);
+    }
+    public CargoCar(String name){
+        this.name = name;
     }
     @Override
     public String Status() {

@@ -2,12 +2,15 @@ import java.util.Random;
 
 public class PassengerCar extends Car {
     int weight;
+    String name;
     public PassengerCar() {        //конструктор
         max = 3500;
         Random random = new Random();
         weight = random.nextInt(3500);
     }
-
+    public PassengerCar(String name){
+        this.name = name;
+    }
     @Override
     public String Status() {
         if (weight + cargo > max) {
