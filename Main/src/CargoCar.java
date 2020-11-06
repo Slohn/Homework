@@ -2,6 +2,7 @@ import java.util.Random;
 public class CargoCar extends Car {
     int weight;
     String name;
+    int num = 0;
     Random random = new Random();
     public CargoCar() {
         max = 10000;
@@ -10,26 +11,29 @@ public class CargoCar extends Car {
     public CargoCar(String name){
         this.name = name;
     }
-    @Override
-    public String Status() {
-        if (weight + cargo > max) {
-            status = "Overloaded";
-        } else if (cargo == 0) {
-            status = "Empty";
+
+    public Status Status() {
+        Status st;
+        if (weight> max) {
+            st = Status.Overloaded;
+        } else if (num == 0) {
+            st = Status.Empty;
         } else {
-            status = "Working";
+            st = Status.Working;
         }
-        return status;
+        return st;
     }
         @Override
         public int Load(int cargo) {
-            this.cargo = cargo;
-            return cargo;
+            this.weight += cargo;
+            this.num =1;
+            return weight;
         }
 
     @Override
-    public int Unload() {
-        cargo = 0;
-        return cargo;
+    public int Unload(int cargo) {
+        this.weight -= cargo;
+        this.num = 0;
+        return weight;
     }
 }

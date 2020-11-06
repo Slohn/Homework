@@ -9,7 +9,7 @@ public class Main {
         toyota.weight = 2000;
         System.out.println(toyota.Status());
         System.out.println(toyota.weight);
-        toyota.Unload();
+        toyota.Unload(500);
         System.out.println(toyota.Status());
 
     }
