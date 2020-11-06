@@ -3,7 +3,7 @@ import java.util.Random;
 public class PassengerCar extends Car {
     int weight;
     String name;
-
+    int num = 0;
     public PassengerCar() {        //конструктор
         max = 3500;
         Random random = new Random();
@@ -12,12 +12,12 @@ public class PassengerCar extends Car {
     public PassengerCar(String name){
         this.name = name;
     }
-   // @Override
+
     public Status Status() {
         Status st;
         if (weight> max) {
             st = Status.Overloaded;
-        } else if (cargo == 0) {
+        } else if (num == 0) {
             st = Status.Empty;
         } else {
             st = Status.Working;
@@ -27,12 +27,14 @@ public class PassengerCar extends Car {
     @Override
     public int Load(int cargo) {
         this.weight += cargo;
+        this.num =1;
         return weight;
     }
 
     @Override
     public int Unload(int cargo) {
         this.weight -= cargo;
+        this.num =0;
         return weight;
     }
 }
