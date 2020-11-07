@@ -29,7 +29,14 @@ public class Station {
         return g;
     }
 
-    public ArrayList<PassengerCar> getPassengerCars() {
-        return passengerCars;
+    public String getPassengerCars() {
+        String l = "";
+        for(int i = 0;i < passengerCars.size(); i++){
+            String d = passengerCars.get(i).getName();
+            //  String n = car.getName();
+            // str[i] = d;
+            l +=d + ", ";
+        }
+        return l;
     }
 }

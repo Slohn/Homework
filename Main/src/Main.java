@@ -8,5 +8,6 @@ public class Main {
         st.setCargoCars("Kamaz");
         st.setCargoCars("Tata");
         System.out.println(st.getCargoCars());
+        System.out.println(st.getPassengerCars());
     }
 }
