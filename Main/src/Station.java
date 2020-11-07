@@ -11,8 +11,22 @@ public class Station {
         passengerCars.add(new PassengerCar(name));
     }
 
-    public ArrayList<CargoCar> getCargoCars() {
-        return cargoCars;
+   public String getCargoCars() {
+      // cargoCars[] list = null;
+
+      // String[] str = new String[cargoCars.size()];
+    //  for (cargoCars obj: list) {
+       //String str = String.valueOf(obj.get());
+      //     str[i] = ((cargoCars) obj).name;
+      // String[] str = new String[cargoCars.size()];
+       String g = "";
+         for(int i = 0;i < cargoCars.size(); i++){
+             String d = cargoCars.get(i).getName();
+           //  String n = car.getName();
+            // str[i] = d;
+             g +=d + ", ";
+        }
+        return g;
     }
 
     public ArrayList<PassengerCar> getPassengerCars() {

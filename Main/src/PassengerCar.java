@@ -12,7 +12,9 @@ public class PassengerCar extends Car {
     public PassengerCar(String name){
         this.name = name;
     }
-
+   public String getName(){             //NAME GETTER
+        return name;
+   }
     public Status Status() {
         Status st;
         if (weight> max) {
