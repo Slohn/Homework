@@ -11,7 +11,7 @@ public class CargoCar extends Car {
     public CargoCar(String name){
         this.name = name;
     }
-    public String getName(){             //NAME GETTER
+    public String getName(){
         return this.name;
     }
     public Status Status() {
@@ -26,14 +26,14 @@ public class CargoCar extends Car {
         return st;
     }
         @Override
-        public int Load(int cargo) {
+        public int load(int cargo) {
             this.weight += cargo;
             this.num =1;
             return weight;
         }
 
     @Override
-    public int Unload(int cargo) {
+    public int unLoad(int cargo) {
         this.weight -= cargo;
         this.num = 0;
         return weight;

@@ -6,8 +6,7 @@ public class Main {
         st.setPassengerCars("Tesla");
         st.setPassengerCars("KIA");
         st.setCargoCars("Kamaz");
-        st.setCargoCars("Tata");
-        System.out.println(st.getCargoCars());
-        System.out.println(st.getPassengerCars());
+        st.setCargoCars("Ural");
+        st.getCargoCars();
     }
 }

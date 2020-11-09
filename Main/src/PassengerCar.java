@@ -4,7 +4,7 @@ public class PassengerCar extends Car {
     int weight;
     String name;
     int num = 0;
-    public PassengerCar() {        //конструктор
+    public PassengerCar() {
         max = 3500;
         Random random = new Random();
         weight = random.nextInt(3500);
@@ -12,7 +12,7 @@ public class PassengerCar extends Car {
     public PassengerCar(String name){
         this.name = name;
     }
-   public String getName(){             //NAME GETTER
+   public String getName(){
         return name;
    }
     public Status Status() {
@@ -27,14 +27,14 @@ public class PassengerCar extends Car {
         return st;
     }
     @Override
-    public int Load(int cargo) {
+    public int load(int cargo) {
         this.weight += cargo;
         this.num =1;
         return weight;
     }
 
     @Override
-    public int Unload(int cargo) {
+    public int unLoad(int cargo) {
         this.weight -= cargo;
         this.num =0;
         return weight;

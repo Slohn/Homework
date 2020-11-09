@@ -11,30 +11,20 @@ public class Station {
         passengerCars.add(new PassengerCar(name));
     }
 
-   public String getCargoCars() {
-      // cargoCars[] list = null;
-
-      // String[] str = new String[cargoCars.size()];
-    //  for (cargoCars obj: list) {
-       //String str = String.valueOf(obj.get());
-      //     str[i] = ((cargoCars) obj).name;
-      // String[] str = new String[cargoCars.size()];
-       String g = "";
+   public String[] getCargoCars() {
+       String[] str = new String[cargoCars.size()];
          for(int i = 0;i < cargoCars.size(); i++){
              String d = cargoCars.get(i).getName();
-           //  String n = car.getName();
-            // str[i] = d;
-             g +=d + ", ";
+            str[i] = d;
+            System.out.println(d);
         }
-        return g;
+       return str;
     }
 
     public String getPassengerCars() {
         String l = "";
         for(int i = 0;i < passengerCars.size(); i++){
             String d = passengerCars.get(i).getName();
-            //  String n = car.getName();
-            // str[i] = d;
             l +=d + ", ";
         }
         return l;
