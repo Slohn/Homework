@@ -2,28 +2,47 @@ import java.util.Random;
 public class CargoCar extends Car {
     int weight;
     String name;
+    public int maxWeight;
     int num = 0;
+    int status;
     Random random = new Random();
-    public CargoCar() {
-        max = 10000;
+    public CargoCar(String name) {
+        this.name = name;
+        status = 1;
+        maxWeight = 10000;
         weight = random.nextInt(10000);
     }
-    public CargoCar(String name){
-        this.name = name;
+    //public CargoCar(String name){
+   //     this.name = name;
+   // }
+
+    public int getStatus() {
+        return status;
     }
+
+    public void setStatus(int s){
+        this.status = s;
+    }
+
+
     public String getName(){
-        return this.name;
+            return name;
+    }
+
+
+    public int getMax(){
+        return maxWeight;
     }
     public Status Status() {
-        Status st;
-        if (weight> max) {
-            st = Status.Overloaded;
+        Status massCar;
+        if (weight> maxWeight) {
+            massCar = Status.OVERLOADED;
         } else if (num == 0) {
-            st = Status.Empty;
+            massCar = Status.EMPTY;
         } else {
-            st = Status.Working;
+            massCar = Status.WORKING;
         }
-        return st;
+        return massCar;
     }
         @Override
         public int load(int cargo) {
